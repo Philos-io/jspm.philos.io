@@ -1,0 +1,16 @@
+<div class="row container">
+	<div class="col s12 m4 workshopCard" data-ng-repeat="ws in vm.workshops">
+	  <div class="card">
+	    <div class="card-image">
+	      <img data-ng-src="{{'app/'+ws.logo}}">
+	      
+	    </div>
+	    <div class="card-content">
+	      <p data-ng-bind="ws.description"></p>
+	    </div>
+	    <div class="card-action">
+	      <a href="#">More details</a>
+	    </div>
+	  </div>
+	</div>
+</div>

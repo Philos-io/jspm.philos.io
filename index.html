@@ -1,19 +1,23 @@
 <!doctype html>
-<html>
+<html lang="en">
 	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
 		<title>Philos.io</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css" media="screen,projection">
+		<link rel="stylesheet" href="app/modules/assets/css/philos.css" media="screen,projection">
 	</head>
 	<body>
 		
-
 		<div id="wrapper">
-			
+			<philos-nav-bar></philos-nav-bar>
+			<ng-view/>
 		</div>
 
 		<script src="jspm_packages/system.js"></script>
 	  	<script src="config.js"></script>
 	  	<script>
-	    	System.import('app/index');
+			System.import('app/index');
 	  	</script>		
 	</body>	
 </html>
