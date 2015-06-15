@@ -1,20 +1,6 @@
 @charset "UTF-8";
 /* CSS Document */
 
-* {
-  margin: 0;
-}
-html, body {
-  height: 100%;
-}
-
-.card-content{
-  height: 260px;
-}
-
-.brand-logo > img{
-  margin: 2% 5%;
-}
 
 /* Custom Stylesheet */
 /**
@@ -70,4 +56,24 @@ p {
 
 footer.page-footer {
   margin: 0;
+}
+
+
+* {
+  margin: 0;
+}
+html, body {
+  height: 100%;
+}
+
+.card-content{
+  height: 300px;
+}
+
+.brand-logo > img{
+  margin: 2% 5%;
+}
+
+.unicode{
+	font-size: 25px;
 }

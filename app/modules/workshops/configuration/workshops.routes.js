@@ -5,7 +5,7 @@ import 'angular-route';
 function Configuration($routeProvider){
 
 	$routeProvider
-		.when('/', {
+		.when('/workshops', {
 			controller: "WorkshopsController",
 			controllerAs: "vm",
 			templateUrl: './app/modules/workshops/views/workshop.view.html'
