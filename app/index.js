@@ -5,7 +5,6 @@ import './modules/workshops/index';
 import $ from 'jquery';
 import 'materialize';
 
-
 var {
 	bootstrap
 } = angular;

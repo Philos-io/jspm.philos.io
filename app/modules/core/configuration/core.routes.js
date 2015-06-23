@@ -1,4 +1,7 @@
-export default function configuration($routeProvider){
+export default function configuration($routeProvider, $locationProvider){
+
+	$locationProvider.hashPrefix('!');
+  	$locationProvider.html5Mode(true);
 
 	$routeProvider
 		.when('/', {
@@ -9,4 +12,4 @@ export default function configuration($routeProvider){
 
 }
 
-configuration.$inject = ['$routeProvider'];
+configuration.$inject = ['$routeProvider', '$locationProvider'];
