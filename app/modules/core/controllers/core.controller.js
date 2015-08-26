@@ -1,4 +1,4 @@
-export default class CoreController{
+class CoreController{
 	constructor(WorkshopFactory){
 		WorkshopFactory.getWorkshops()
 			.then((response) => {
@@ -8,3 +8,5 @@ export default class CoreController{
 }
 
 CoreController.$inject = ['WorkshopFactory'];
+
+export default CoreController;

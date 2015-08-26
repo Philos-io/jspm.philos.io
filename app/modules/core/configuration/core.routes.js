@@ -1,15 +1,19 @@
-export default function configuration($routeProvider, $locationProvider){
+import mainTemplate from '../views/home.tpl.html'
 
-	$locationProvider.hashPrefix('!');
-  	$locationProvider.html5Mode(true);
+function configuration($routeProvider, $locationProvider){
+
+	// $locationProvider.hashPrefix('!');
+ //  	$locationProvider.html5Mode(true);
 
 	$routeProvider
 		.when('/', {
 			controller: 'CoreController',
 			controllerAs: 'core',
-			templateUrl: './app/modules/core/views/home.view.html'
+			template: mainTemplate
 		});
 
 }
 
 configuration.$inject = ['$routeProvider', '$locationProvider'];
+
+export default configuration;

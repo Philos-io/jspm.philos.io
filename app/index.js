@@ -1,12 +1,18 @@
 import angular from 'angular';
-import Config from './config/index';
-import './modules/core/index';
-import './modules/workshops/index';
-import $ from 'jquery';
-import 'materialize';
+
+import 'materialize-css/bin/materialize.css';
+import 'materialize-css/bin/materialize.js';
+
+// css files
+import '../app/assets/css/philos.css'
+
+import Config from './config';
+import  core from './modules/core/';
 
 var {
-	bootstrap
+	bootstrap,
+	module,
+	element
 } = angular;
 
 var {
@@ -15,22 +21,10 @@ var {
 	coreModule
 } = Config;
 
-angular.module(appModule, [workshopModule, coreModule]);
+module(appModule, [coreModule]);
 
-var node = document.getElementById('wrapper');
-
-angular.element(document).ready(function() {
-    bootstrap(node, [appModule], {
-		strictDI: true
-	});
-
-	var clicked = false;
-
-	// People, don't ever do this, it's a hack :(
-	$(document).on('click', '.button-collapse', function(){
-		if(!clicked){
-			$(this).sideNav();
-			$(this).click();
-		}
+element(document).ready(function() {
+    bootstrap(document.body, [appModule], {
+		strictDi: true
 	});
 });

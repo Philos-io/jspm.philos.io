@@ -1,4 +1,4 @@
-export default class WorkshopsController{
+class WorkshopsController{
 	constructor(WorkshopFactory){
 
 		WorkshopFactory.getWorkshops()
@@ -6,8 +6,8 @@ export default class WorkshopsController{
 				this.workshops = response.data.workshops;
 			});
 	}
-
 }
 
-
 WorkshopsController.$inject = ['WorkshopFactory'];
+
+export default WorkshopsController;
